@@ -1,1 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sushanth R Acharya | Portfolio</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Particles JS -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #020617;
+  color: white;
+  transition: 0.3s;
+}
+
+.light {
+  background: #f8fafc;
+  color: black;
+}
+
+:root {
+  --accent: #38bdf8;
+  --primary: #2563eb;
+  --glass: rgba(255,255,255,0.08);
+}
+
+/* PARTICLES */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  backdrop-filter: blur(14px);
+  background: rgba(0,0,0,0.6);
+  border-bottom: 1px solid #1e293b;
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-inner a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+  transition: 0.3s;
+}
+.nav-inner a:hover { color: var(--accent); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* PROFILE IMAGE CIRCLE */
+.profile-pic {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--accent);
+  box-shadow: 0 0 25px rgba(56,189,248,0.6);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.hero h1 {
+  font-size: 3.2rem;
+  background: linear-gradient(90deg, #38bdf8, #2563eb);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  margin-top: 12px;
+  color: #94a3b8;
+  max-width: 600px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  border-left: 5px solid var(--accent);
+  padding-left: 15px;
+  margin-bottom: 30px;
+}
+
+/* GLASS CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+}
+
+/* TAGS */
+.tags {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: rgba(56,189,248,0.15);
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+/* SKILLS BAR */
+.skill {
+  margin-bottom: 14px;
+}
+.skill-bar {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #2563eb);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <strong>Sushanth.Dev</strong>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button onclick="toggleMode()" style="margin-left:15px;">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<!-- PROFILE IMAGE -->
+<div class="profile-pic">
+  <img src="profile.jpg" alt="Sushanth">
+</div>
+
+<div>
+<h1>Sushanth R Acharya</h1>
+<h3 id="typing"></h3>
+
+<p>
+MCA Graduate (2025) specializing in Full Stack Web Development, AI/ML, YOLO Computer Vision,
+and scalable production-ready applications.
+</p>
+
+<a href="resume.pdf" download class="btn">📄 Download Resume</a>
+<a href="https://github.com/sushanth1271" target="_blank" class="btn">GitHub</a>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>YOLO Crowd Surveillance</h3>
+<p>Real-time crowd & safety detection with 90% accuracy.</p>
+<div class="tags">
+<span class="tag">YOLO</span><span class="tag">Python</span><span class="tag">OpenCV</span>
+</div>
+</div>
+
+<div class="card">
+<h3>Telemedicine Ambulance</h3>
+<p>WebRTC live video streaming system for hospitals.</p>
+<div class="tags">
+<span class="tag">React</span><span class="tag">Node</span><span class="tag">MongoDB</span>
+</div>
+</div>
+
+<div class="card">
+<h3>Personal Expense Tracker</h3>
+<p>Python Tkinter GUI for expense tracking.</p>
+<div class="tags">
+<span class="tag">Tkinter</span><span class="tag">Pandas</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- GITHUB LIVE REPOS -->
+<section>
+<h2 class="section-title">GitHub Repositories</h2>
+<div id="repoGrid" class="grid"></div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+
+<div class="grid">
+<div class="card"><h4>Python</h4><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+<div class="card"><h4>React / MERN</h4><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+<div class="card"><h4>AI / ML</h4><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+<div class="card"><h4>AWS</h4><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="section-title">Contact</h2>
+
+<div class="grid">
+<div class="card">📍 Kushalnagar, Karnataka</div>
+<div class="card">📧 acharyasushanth0@gmail.com</div>
+<div class="card">📞 +91 9632530090</div>
+<div class="card">
+🔗 <a href="https://linkedin.com/in/sushanth-r-acharya" target="_blank" style="color:#38bdf8;">LinkedIn</a>
+</div>
+</div>
+</section>
+
+<footer>
+© 2025 Sushanth R Acharya — Premium Portfolio
+</footer>
+
+<script>
+// Typing Effect
+const text = "Full Stack Developer | AI/ML Engineer | YOLO Specialist";
+let i = 0;
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 60);
+  }
+}
+typeEffect();
+
+
+// GitHub Repo Loader
+fetch("https://api.github.com/users/sushanth1271/repos")
+.then(res => res.json())
+.then(data => {
+  let html = "";
+  data.slice(0,6).forEach(repo => {
+    html += `
+    <div class="card">
+      <h3>${repo.name}</h3>
+      <p>${repo.description || "No description"}</p>
+      <a href="${repo.html_url}" target="_blank" style="color:#38bdf8;">View Repo →</a>
+    </div>`;
+  });
+  document.getElementById("repoGrid").innerHTML = html;
+});
+
+// Particles Background
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    color: { value: "#38bdf8" },
+    size: { value: 3 },
+    move: { speed: 1 }
+  }
+});
+</script>
+
+</body>
+</html>
 
